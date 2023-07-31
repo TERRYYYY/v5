@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+</head>
+<body>
+
+    <section id="marquee">
+        <div class="container">
+            <div class="pic-container">
+                <div class="pic">
+                    <img src="./1.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./2.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./3.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./4.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./5.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./6.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./7.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./8.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="pic-container-2">
+                <div class="pic-2">
+                    <img class="img-2" src="./1.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img class="img-2" src="./2.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img class="img-2" src="./3.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./4.jpg" class="img-2" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./5.jpg" class="img-2" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./6.jpg" class="img-2" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./7.jpg" class="img-2" alt="">
+                </div>
+                <div class="pic">
+                    <img src="./8.jpg" class="img-2" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start of Blog Section -->
+    <section class="blog-section" style="height: 500px;">
+        <div class="content-fourth">
+            <h1>Blog Section</h1>
+            <button class="btn btn-primary">Read More</button>
+        </div>
+    </section>
+    <!-- End of Blog Section -->
+
+    <div class="circular-text">
+        <span id="rotated">
+            BRIAN &#8226; OTIENO &#8226; & &#8226; COMPANY &#8226; 
+        </span>
+        <div class="arrow">
+            <i class="fa fa-arrow-down" id="arrow-down" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        const circleType = new CircleType(
+            document.getElementById('rotated')).radius(50);
+        $(window).scroll(function(){
+            var offset = $(window).scrollTop();
+            offset = offset * 0.4;
+
+            $(".circular-text").css({
+                "-moz-transform": "rotate(" + offset + "deg)",
+                "-webkit-transform": "rotate(" + offset + "deg)",
+                "-ms-transform": "rotate(" + offset + "deg)",
+                "transform": "rotate(" + offset + "deg)",
+                "-o-transform": "rotate(" + offset + "deg)",
+            });
+        });
+        
+    </script>
+</body>
+</html>
